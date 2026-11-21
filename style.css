@@ -1,0 +1,722 @@
+/* ===== Minimal Academic Style — inspired by minimal-mistakes theme ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #404040;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Top Nav ===== */
+.masthead {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 0;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.masthead__inner-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== Language Switch ===== */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    color: #999;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.lang-btn:hover {
+    color: #1171ef;
+}
+
+.lang-btn.active {
+    color: #1171ef;
+    background: #eef3ff;
+    font-weight: 600;
+}
+
+.lang-sep {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.visible-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.masthead__menu-item {
+    display: inline-block;
+}
+
+.masthead__menu-item a {
+    display: block;
+    padding: 14px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #404040;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.masthead__menu-item a:hover {
+    color: #1171ef;
+    border-bottom-color: #1171ef;
+}
+
+.masthead__menu-home-item a {
+    font-weight: 600;
+    color: #111;
+}
+
+/* ===== Layout: Sidebar + Main ===== */
+#main.page__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    position: sticky;
+    top: 80px;
+    align-self: start;
+}
+
+.profile_box {
+    text-align: center;
+    padding: 0;
+}
+
+.author__avatar {
+    margin-bottom: 16px;
+}
+
+.author__avatar img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1px #e3e3e3;
+}
+
+.avatar-placeholder {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #e3e3e3;
+    background: #f5f5f5;
+    display: inline-block;
+}
+
+.avatar-placeholder svg {
+    width: 100%;
+    height: 100%;
+}
+
+.author__content {
+    margin-bottom: 20px;
+}
+
+.author__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.author__bio {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.author__urls-wrapper {
+    margin-top: 16px;
+}
+
+.social-icons {
+    list-style: none;
+    text-align: left;
+    font-size: 13px;
+}
+
+.social-icons li {
+    margin-bottom: 8px;
+}
+
+.social-icons a {
+    color: #404040;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #1171ef;
+}
+
+.social-icons i {
+    width: 20px;
+    text-align: center;
+    margin-right: 6px;
+    color: #999;
+}
+
+/* ===== Main Content ===== */
+.page__inner-wrap {
+    min-width: 0;
+}
+
+.page__content h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111;
+    margin: 48px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e3e3e3;
+    letter-spacing: -0.01em;
+}
+
+.page__content h1:first-child {
+    margin-top: 0;
+}
+
+.page__content p {
+    margin-bottom: 14px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.page__content a {
+    color: #1171ef;
+    text-decoration: none;
+}
+
+.page__content a:hover {
+    text-decoration: underline;
+}
+
+.page__content strong {
+    color: #111;
+    font-weight: 600;
+}
+
+.page__content em {
+    font-style: italic;
+    color: #888;
+    font-size: 13px;
+}
+
+.page__content ul {
+    margin: 10px 0 18px;
+    padding-left: 22px;
+}
+
+.page__content ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.65;
+    list-style-type: disc;
+}
+
+.page__content hr {
+    border: none;
+    border-top: 1px solid #e3e3e3;
+    margin: 28px 0;
+}
+
+.page__content .anchor {
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+}
+
+.page__content h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #111;
+    margin: 36px 0 6px;
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+}
+
+.meta {
+    font-size: 13px !important;
+    color: #777;
+    margin-bottom: 4px !important;
+}
+
+.authors {
+    font-size: 13px !important;
+    color: #555;
+    margin-bottom: 12px !important;
+}
+
+.status {
+    margin-top: 8px;
+}
+
+.pub-list li {
+    margin-bottom: 14px;
+    font-size: 14.5px;
+    line-height: 1.65;
+}
+
+.footer {
+    font-size: 13px !important;
+    color: #999;
+    margin-top: 12px;
+}
+
+/* ===== Practice groups ===== */
+.group-title {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 0.01em;
+    margin: 38px 0 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 20px 0 8px;
+}
+
+.photo-grid figure {
+    margin: 0;
+}
+
+.photo-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #eee;
+}
+
+.photo-grid figcaption {
+    font-size: 12px;
+    color: #888;
+    margin-top: 6px;
+    text-align: center;
+    line-height: 1.45;
+}
+
+/* ===== Research map ===== */
+.map-hint {
+    font-size: 13px !important;
+    color: #888;
+    margin: 0 0 10px !important;
+}
+
+.research-map {
+    margin: 14px 0 10px;
+}
+
+.research-map a {
+    display: block;
+    cursor: zoom-in;
+}
+
+.research-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.research-map .map-zh {
+    display: none;
+}
+
+html[lang^="zh"] .research-map .map-en {
+    display: none;
+}
+
+html[lang^="zh"] .research-map .map-zh {
+    display: block;
+}
+
+/* ===== Entry head (education) ===== */
+.entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.entry-date {
+    font-size: 13px;
+    color: #777;
+    white-space: nowrap;
+}
+
+/* ===== Project header ===== */
+.proj-index {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: #9a9a9a;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.en-title {
+    font-size: 13px;
+    font-style: italic;
+    color: #777;
+    margin: -2px 0 6px;
+    line-height: 1.5;
+}
+
+html[lang="en"] .en-title {
+    display: none;
+}
+
+ul.interest-list {
+    margin: 0 0 4px;
+    padding-left: 20px;
+}
+
+ul.interest-list li {
+    margin: 0 0 4px;
+    font-size: 15px;
+    line-height: 1.6;
+    list-style-type: disc;
+}
+
+ul.contrib {
+    margin: 0 0 18px;
+    padding-left: 20px;
+}
+
+ul.contrib li {
+    margin: 0 0 10px;
+    line-height: 1.75;
+    text-align: justify;
+}
+
+ul.contrib li:last-child {
+    margin-bottom: 0;
+}
+
+.role {
+    font-size: 13.5px;
+    color: #555;
+    margin: 0 0 3px;
+}
+
+/* Publication / funding line grouped under the role line */
+p.cite.pub-top {
+    margin: 0 0 18px !important;
+    font-size: 12.5px !important;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* ===== Figures ===== */
+.figure-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 14px 0 6px;
+}
+
+.figure-row.single {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+}
+
+.figure-row figure {
+    margin: 0;
+}
+
+.figure-row img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.figure-row.logo img {
+    padding: 10px 18px;
+    object-fit: contain;
+}
+
+.figure-row figcaption {
+    font-size: 12px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+/* ===== Videos ===== */
+.video-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 16px 0 4px;
+}
+
+.video-row figure {
+    margin: 0;
+}
+
+.video-row video {
+    width: 100%;
+    display: block;
+    background: #000;
+    border: 1px solid #eee;
+}
+
+.video-row figcaption {
+    font-size: 13px;
+    color: #888;
+    margin-top: 8px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+/* ===== Block label ===== */
+.block-label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #111;
+    margin: 20px 0 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.cite {
+    font-size: 13px !important;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 14px !important;
+    text-align: justify;
+}
+
+.metrics {
+    font-size: 14px !important;
+    color: #333;
+    background: #fafafa;
+    border-left: 3px solid #ddd;
+    padding: 8px 12px;
+    margin: 14px 0 !important;
+}
+
+/* ===== Description lists ===== */
+dl.work,
+dl.kv {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    margin: 6px 0 20px;
+}
+
+dl.work dt,
+dl.kv dt {
+    font-weight: 600;
+    font-size: 13.5px;
+    color: #111;
+    padding: 9px 10px 9px 0;
+    border-bottom: 1px solid #eee;
+    line-height: 1.55;
+}
+
+dl.work dd,
+dl.kv dd {
+    margin: 0;
+    padding: 9px 0;
+    font-size: 14px;
+    line-height: 1.68;
+    border-bottom: 1px solid #eee;
+    text-align: justify;
+}
+
+/* Project subheadings (Problem / Approach / Result / Boundary) */
+.subheading {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #111;
+    margin: 18px 0 6px;
+    letter-spacing: -0.005em;
+}
+
+/* Project images */
+.project-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 12px 0 16px;
+    border: 1px solid #eee;
+}
+
+/* Nested lists for publications */
+.page__content ul ul {
+    margin: 6px 0 10px;
+    padding-left: 18px;
+}
+
+.page__content ul ul li {
+    font-size: 14px;
+    list-style-type: circle;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    #main.page__inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .sidebar {
+        position: static;
+        text-align: center;
+    }
+
+    .profile_box {
+        text-align: center;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+
+    .masthead__inner-wrap {
+        padding: 0 12px;
+    }
+
+    .masthead__menu-item a {
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+
+    .page__content h1 {
+        font-size: 1.35rem;
+    }
+
+    .figure-row {
+        grid-template-columns: 1fr;
+    }
+
+    .figure-row.single {
+        max-width: 100%;
+    }
+
+    dl.work,
+    dl.kv {
+        grid-template-columns: 1fr;
+    }
+
+    dl.work dt,
+    dl.kv dt {
+        padding: 10px 0 2px;
+        border-bottom: none;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .visible-links {
+        justify-content: center;
+    }
+
+    .masthead__menu-item a {
+        padding: 8px 8px;
+        font-size: 12px;
+    }
+
+    .avatar-placeholder, .author__avatar img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* ===== Lightbox (research map) ===== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: zoom-out;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    background: #fff;
+}
